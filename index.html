@@ -46,7 +46,7 @@
         </div>
         <div class="middle-container" id="contact-container" style="display: none;">
             <p>email <a href="mailto:team@souslabs.com">team@souslabs.com</a> or fill out this form:</p>
-            <form class="contact-form" action="//formspree.io/team@souslabs.com" method="post">
+            <form class="contact-form" method="POST">
                 <div class="row">
                     <div class="contact-input col-xs-6">
             <input type="text" class="form-control" name="name" placeholder="name">
@@ -63,6 +63,10 @@
                 <input type="hidden" name="_next" value="//souslabs.com" />
                 
             </form>
+            <script>
+                var contactform =  document.getElementById('contactform');
+                contactform.setAttribute('action', '//formspree.io/' + 'team' + '@' + 'souslabs' + '.' + 'com');
+            </script>
         </div>
         
     </body>
